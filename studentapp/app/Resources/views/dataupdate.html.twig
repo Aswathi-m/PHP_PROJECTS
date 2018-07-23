@@ -1,0 +1,30 @@
+{% extends 'stud.base.html.twig' %}
+{% block body %}
+   <h3 align = "center">Student Registration</h3>
+ <div>
+       {{ form_start(form) }}
+       {{ form_errors(form) }}
+
+          <table >
+           <tr>
+               <td>{{ form_label(form.name,'Name:') }} </td>
+               <td>{{ form_widget(form.name) }}</td>
+                   {{ form_errors(form.name) }}
+           </tr>
+           <tr>
+               <td>{{ form_label(form.email, 'Email: ') }}</td>
+                <td>{{ form_widget(form.email) }}</td>
+             
+	   </tr>
+	   <tr>
+               <td> {{ form_label(form.save) }}</td>
+               <td> {{ form_widget(form.save) }}</td>
+              
+          </tr>
+        
+         </table>
+       
+           {{ form_widget(form.save) }}
+       {{ form_end(form) }}
+ </div>
+{% endblock %}
